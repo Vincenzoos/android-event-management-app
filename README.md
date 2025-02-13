@@ -1,3 +1,6 @@
+TODO:
+- files organization
+
 Android Event Management Application
 
 Description:
