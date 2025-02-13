@@ -1,5 +1,6 @@
 TODO:
 - files organization
+- Add images showcasing the app functionality
 
 Android Event Management Application
 
