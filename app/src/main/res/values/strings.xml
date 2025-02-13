@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">VietTran-33810672-FIT2081-A2</string>
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyByB64x8WOemsLdnmypzU-sKNBTJeLS3Nw</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">MapsActivity</string>
+
+</resources>

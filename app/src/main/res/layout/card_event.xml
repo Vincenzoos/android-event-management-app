@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_event="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view_event"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:clickable="true"
+    android:foreground="?selectableItemBackground"
+    card_event:cardBackgroundColor="@android:color/holo_purple"
+    card_event:cardCornerRadius="12dp"
+    card_event:cardElevation="3dp"
+    card_event:contentPadding="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="51dp">
+
+
+        <TextView
+            android:id="@+id/tvCardEventID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID"
+            android:textColor="@color/white"
+            card_event:layout_constraintStart_toStartOf="parent"
+            card_event:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvCardEventName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:text="Name"
+            android:textColor="@color/white"
+            card_event:layout_constraintStart_toEndOf="@+id/tvCardEventID"
+            card_event:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvCardEventCateID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CategoryID"
+            android:textColor="@color/white"
+            card_event:layout_constraintBottom_toBottomOf="parent"
+            card_event:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvCardEventTickets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="Tickets"
+            android:textColor="@color/white"
+            card_event:layout_constraintBottom_toBottomOf="parent"
+            card_event:layout_constraintStart_toEndOf="@+id/tvCardEventCateID" />
+
+        <TextView
+            android:id="@+id/tvCardEventIsActive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="Active"
+            android:textColor="@color/white"
+            card_event:layout_constraintBottom_toBottomOf="parent"
+            card_event:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
