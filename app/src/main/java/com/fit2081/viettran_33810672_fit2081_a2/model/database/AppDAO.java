@@ -13,7 +13,7 @@ import java.util.List;
 // Indicates that this interface is a Data Access Object (DAO),
 // used for interacting with the database.
 @Dao
-public interface appDAO {
+public interface AppDAO {
 
     // CRUD operations for Category Table/Entity
     @Query("select * from category")

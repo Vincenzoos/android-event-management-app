@@ -10,18 +10,18 @@ import com.fit2081.viettran_33810672_fit2081_a2.view.adapter.CategoryAdapter;
 import com.fit2081.viettran_33810672_fit2081_a2.view.adapter.EventAdapter;
 import com.fit2081.viettran_33810672_fit2081_a2.model.entity.CategoryEntity;
 import com.fit2081.viettran_33810672_fit2081_a2.model.entity.EventEntity;
-import com.fit2081.viettran_33810672_fit2081_a2.viewmodel.appViewModel;
+import com.fit2081.viettran_33810672_fit2081_a2.viewmodel.AppViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class appDatabaseHelper {
+public class AppDatabaseHelper {
     CategoryEntity curCate;
-    public appViewModel initViewModel(ViewModelStoreOwner viewModelStoreOwner){
+    public AppViewModel initViewModel(ViewModelStoreOwner viewModelStoreOwner){
         // initialise ViewModel
-        return new ViewModelProvider(viewModelStoreOwner).get(appViewModel.class);
+        return new ViewModelProvider(viewModelStoreOwner).get(AppViewModel.class);
     }
-    public ArrayList<CategoryEntity> Categories(LifecycleOwner lifecycleOwner, appViewModel mAppViewModel){
+    public ArrayList<CategoryEntity> Categories(LifecycleOwner lifecycleOwner, AppViewModel mAppViewModel){
         ArrayList<CategoryEntity> cateDatabase = new ArrayList<>();
 
         LiveData<List<CategoryEntity>> liveDataCategories = mAppViewModel.getAllCate();
@@ -34,7 +34,7 @@ public class appDatabaseHelper {
         return cateDatabase;
     }
 
-    public ArrayList<String> listCateID(LifecycleOwner lifecycleOwner, appViewModel mAppViewModel){
+    public ArrayList<String> listCateID(LifecycleOwner lifecycleOwner, AppViewModel mAppViewModel){
         ArrayList<String> listCateID = new ArrayList<>();
         LiveData<List<CategoryEntity>> liveDataCategories = mAppViewModel.getAllCate();
         liveDataCategories.observe(lifecycleOwner, new Observer<List<CategoryEntity>>() {
@@ -60,7 +60,7 @@ public class appDatabaseHelper {
 //        return categoriesHasEvent;
 //    }
 
-    public ArrayList<EventEntity> Events(LifecycleOwner lifecycleOwner, appViewModel mAppViewModel){
+    public ArrayList<EventEntity> Events(LifecycleOwner lifecycleOwner, AppViewModel mAppViewModel){
         ArrayList<EventEntity> eventDatabase = new ArrayList<>();
         LiveData<List<EventEntity>> liveDataEvents = mAppViewModel.getAllEvent();
         liveDataEvents.observe(lifecycleOwner, new Observer<List<EventEntity>>() {
@@ -72,7 +72,7 @@ public class appDatabaseHelper {
         return eventDatabase;
     }
 
-    public void subscribeCateToLiveData(LifecycleOwner lifecycleOwner , appViewModel mAppViewModel , CategoryAdapter categoryAdapter){
+    public void subscribeCateToLiveData(LifecycleOwner lifecycleOwner , AppViewModel mAppViewModel , CategoryAdapter categoryAdapter){
         // subscribe to LiveData of type ArrayList<>,
         // any changes detected in the database will be notified to this fragment
         mAppViewModel.getAllCate().observe(lifecycleOwner, newData -> {
@@ -82,7 +82,7 @@ public class appDatabaseHelper {
         });
     }
 
-    public void subscribeEventToLiveData(LifecycleOwner lifecycleOwner , appViewModel mAppViewModel , EventAdapter eventAdapter){
+    public void subscribeEventToLiveData(LifecycleOwner lifecycleOwner , AppViewModel mAppViewModel , EventAdapter eventAdapter){
         // subscribe to LiveData of type ArrayList<>,
         // any changes detected in the database will be notified to this fragment
         // subscribe to LiveData of type ArrayList<>,

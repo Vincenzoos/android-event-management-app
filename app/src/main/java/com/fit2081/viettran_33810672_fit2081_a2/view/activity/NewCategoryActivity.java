@@ -20,9 +20,9 @@ import com.fit2081.viettran_33810672_fit2081_a1.R;
 import com.fit2081.viettran_33810672_fit2081_a2.utils.AppUtils;
 import com.fit2081.viettran_33810672_fit2081_a2.view.adapter.CategoryAdapter;
 import com.fit2081.viettran_33810672_fit2081_a2.utils.SMSReceiver;
-import com.fit2081.viettran_33810672_fit2081_a2.viewmodel.appViewModel;
+import com.fit2081.viettran_33810672_fit2081_a2.viewmodel.AppViewModel;
 import com.fit2081.viettran_33810672_fit2081_a2.model.database.CategoryDatabaseHelper;
-import com.fit2081.viettran_33810672_fit2081_a2.model.database.appDatabaseHelper;
+import com.fit2081.viettran_33810672_fit2081_a2.model.database.AppDatabaseHelper;
 import com.fit2081.viettran_33810672_fit2081_a2.model.entity.CategoryEntity;
 import com.google.gson.Gson;
 
@@ -39,8 +39,8 @@ public class NewCategoryActivity extends AppCompatActivity {
     ArrayList<CategoryEntity> cateDatabase;
     Gson gson;
 
-    private appViewModel mAppViewModel;
-    private appDatabaseHelper databaseHelper;
+    private AppViewModel mAppViewModel;
+    private AppDatabaseHelper databaseHelper;
 
     private CategoryDatabaseHelper categoryDatabaseHelper;
     CategoryAdapter categoryAdapter;
@@ -84,7 +84,7 @@ public class NewCategoryActivity extends AppCompatActivity {
         // create a new instance of Gson:
         gson = new Gson();
 
-        databaseHelper = new appDatabaseHelper();
+        databaseHelper = new AppDatabaseHelper();
 
         // initialise ViewModel
         mAppViewModel = databaseHelper.initViewModel(this);

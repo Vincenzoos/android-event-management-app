@@ -26,10 +26,10 @@ import com.fit2081.viettran_33810672_fit2081_a1.R;
 import com.fit2081.viettran_33810672_fit2081_a2.utils.AppUtils;
 import com.fit2081.viettran_33810672_fit2081_a2.view.fragment.FragmentListCategory;
 import com.fit2081.viettran_33810672_fit2081_a2.utils.SMSReceiver;
-import com.fit2081.viettran_33810672_fit2081_a2.viewmodel.appViewModel;
+import com.fit2081.viettran_33810672_fit2081_a2.viewmodel.AppViewModel;
 import com.fit2081.viettran_33810672_fit2081_a2.model.database.CategoryDatabaseHelper;
 import com.fit2081.viettran_33810672_fit2081_a2.model.database.EventDatabaseHelper;
-import com.fit2081.viettran_33810672_fit2081_a2.model.database.appDatabaseHelper;
+import com.fit2081.viettran_33810672_fit2081_a2.model.database.AppDatabaseHelper;
 import com.fit2081.viettran_33810672_fit2081_a2.model.entity.CategoryEntity;
 import com.fit2081.viettran_33810672_fit2081_a2.model.entity.EventEntity;
 import com.google.android.material.navigation.NavigationView;
@@ -60,8 +60,8 @@ public class DashBoardActivity extends AppCompatActivity {
     public static final String EVENT_DATABASE_KEY = "event_database_key";
     public static final String CATE_DATABASE_KEY = "category_database_key";
 
-    private appViewModel mAppViewModel;
-    private appDatabaseHelper databaseHelper;
+    private AppViewModel mAppViewModel;
+    private AppDatabaseHelper databaseHelper;
     private View touchpadView, dashboardLayout;
     private TextView tvGestureType;
     private GestureDetector mDetector;
@@ -139,7 +139,7 @@ public class DashBoardActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().replace(
                 R.id.dashboard_host_container, new FragmentListCategory()).commit();
 
-        databaseHelper = new appDatabaseHelper();
+        databaseHelper = new AppDatabaseHelper();
         // initialise ViewModel
         mAppViewModel = databaseHelper.initViewModel(this);
 

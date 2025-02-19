@@ -12,9 +12,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.fit2081.viettran_33810672_fit2081_a1.R;
-import com.fit2081.viettran_33810672_fit2081_a2.viewmodel.appViewModel;
+import com.fit2081.viettran_33810672_fit2081_a2.viewmodel.AppViewModel;
 import com.fit2081.viettran_33810672_fit2081_a2.model.database.EventDatabaseHelper;
-import com.fit2081.viettran_33810672_fit2081_a2.model.database.appDatabaseHelper;
+import com.fit2081.viettran_33810672_fit2081_a2.model.database.AppDatabaseHelper;
 import com.fit2081.viettran_33810672_fit2081_a2.model.entity.EventEntity;
 import com.fit2081.viettran_33810672_fit2081_a2.view.adapter.EventAdapter;
 import com.google.gson.Gson;
@@ -31,7 +31,7 @@ public class FragmentListEvent extends Fragment {
     Gson gson;
     ArrayList<EventEntity> eventDatabase;
     private EventDatabaseHelper eventDatabaseHelper;
-    private appDatabaseHelper databaseHelper;
+    private AppDatabaseHelper databaseHelper;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -91,9 +91,9 @@ public class FragmentListEvent extends Fragment {
         recyclerView.setAdapter(eventAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        databaseHelper = new appDatabaseHelper();
+        databaseHelper = new AppDatabaseHelper();
         // initialise ViewModel
-        appViewModel mAppViewModel = databaseHelper.initViewModel(this);
+        AppViewModel mAppViewModel = databaseHelper.initViewModel(this);
         databaseHelper.subscribeEventToLiveData(getViewLifecycleOwner(), mAppViewModel, eventAdapter);
 
         return eventFragment;

@@ -13,15 +13,15 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 @Database(entities = {CategoryEntity.class, EventEntity.class}, version = 1)
-public abstract class appDatabase extends RoomDatabase {
+public abstract class AppDatabase extends RoomDatabase {
 
     // database name, this is important as data is contained inside a file named "my_database"
     public static final String DATABASE_NAME = "my_database";
-    public abstract appDAO appDAO();
+    public abstract AppDAO appDAO();
 
     private static final int NUMBER_OF_THREADS = 4;
     // marking the instance as volatile to ensure atomic access to the variable
-    private static volatile appDatabase INSTANCE;
+    private static volatile AppDatabase INSTANCE;
 
     // ExecutorService is a JDK API that simplifies running tasks in asynchronous mode.
     // Generally speaking, ExecutorService automatically provides a pool of threads and an API
@@ -40,15 +40,15 @@ public abstract class appDatabase extends RoomDatabase {
      * @return a reference to the database for read and write operation
      */
 
-    public static appDatabase getDatabase(final Context context){
+    public static AppDatabase getDatabase(final Context context){
         if(INSTANCE == null){
             // Synchronized blocks or methods prevents thread interference and make sure that data is consistent.
             // It means that only one thread can access critical section by acquiring a lock.
             // Unless this thread release this lock, all other thread(s) will have to wait to acquire a lock.
-            synchronized (appDatabase.class){
+            synchronized (AppDatabase.class){
                 if (INSTANCE == null){
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
-                                appDatabase.class, DATABASE_NAME)
+                                AppDatabase.class, DATABASE_NAME)
                             .allowMainThreadQueries()
                             .build();
                 }

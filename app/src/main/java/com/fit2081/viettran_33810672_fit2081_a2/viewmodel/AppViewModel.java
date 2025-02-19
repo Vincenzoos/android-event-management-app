@@ -8,19 +8,19 @@ import androidx.lifecycle.LiveData;
 
 import com.fit2081.viettran_33810672_fit2081_a2.model.entity.CategoryEntity;
 import com.fit2081.viettran_33810672_fit2081_a2.model.entity.EventEntity;
-import com.fit2081.viettran_33810672_fit2081_a2.model.repository.appRepository;
+import com.fit2081.viettran_33810672_fit2081_a2.model.repository.AppRepository;
 
 import java.util.List;
 
 
-public class appViewModel extends AndroidViewModel {
+public class AppViewModel extends AndroidViewModel {
 
-    private appRepository mAppRepository;
+    private AppRepository mAppRepository;
     private LiveData<List<CategoryEntity>> mAllCate;
     private LiveData<List<EventEntity>> mAllEvent;
-    public appViewModel(@NonNull Application application) {
+    public AppViewModel(@NonNull Application application) {
         super(application);
-        mAppRepository = new appRepository(application);
+        mAppRepository = new AppRepository(application);
         mAllCate = mAppRepository.getAllCate();
         mAllEvent = mAppRepository.getAllEvent();
     }

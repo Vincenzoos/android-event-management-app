@@ -11,9 +11,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.fit2081.viettran_33810672_fit2081_a1.R;
-import com.fit2081.viettran_33810672_fit2081_a2.viewmodel.appViewModel;
+import com.fit2081.viettran_33810672_fit2081_a2.viewmodel.AppViewModel;
 import com.fit2081.viettran_33810672_fit2081_a2.model.database.CategoryDatabaseHelper;
-import com.fit2081.viettran_33810672_fit2081_a2.model.database.appDatabaseHelper;
+import com.fit2081.viettran_33810672_fit2081_a2.model.database.AppDatabaseHelper;
 import com.fit2081.viettran_33810672_fit2081_a2.model.entity.CategoryEntity;
 import com.fit2081.viettran_33810672_fit2081_a2.view.adapter.CategoryAdapter;
 import com.google.gson.Gson;
@@ -30,8 +30,8 @@ public class FragmentListCategory extends Fragment {
     List<CategoryEntity> cateDatabase;
     private CategoryDatabaseHelper categoryDatabaseHelper;
 
-    private appViewModel mAppViewModel;
-    private appDatabaseHelper databaseHelper;
+    private AppViewModel mAppViewModel;
+    private AppDatabaseHelper databaseHelper;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -91,7 +91,7 @@ public class FragmentListCategory extends Fragment {
         recyclerView.setAdapter(categoryAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        databaseHelper = new appDatabaseHelper();
+        databaseHelper = new AppDatabaseHelper();
         // initialise ViewModel
         mAppViewModel = databaseHelper.initViewModel(this);
         // subscribe to LiveData of type ArrayList<>,
