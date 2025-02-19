@@ -10,7 +10,7 @@ import com.fit2081.viettran_33810672_fit2081_a2.view.adapter.CategoryAdapter;
 import com.fit2081.viettran_33810672_fit2081_a2.view.adapter.EventAdapter;
 import com.fit2081.viettran_33810672_fit2081_a2.model.entity.CategoryEntity;
 import com.fit2081.viettran_33810672_fit2081_a2.model.entity.EventEntity;
-import com.fit2081.viettran_33810672_fit2081_a2.appViewModel;
+import com.fit2081.viettran_33810672_fit2081_a2.viewmodel.appViewModel;
 
 import java.util.ArrayList;
 import java.util.List;

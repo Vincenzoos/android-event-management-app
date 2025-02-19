@@ -50,7 +50,7 @@
             android:exported="false" />
 
         <receiver
-            android:name="com.fit2081.viettran_33810672_fit2081_a2.SMSReceiver"
+            android:name="com.fit2081.viettran_33810672_fit2081_a2.utils.SMSReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>

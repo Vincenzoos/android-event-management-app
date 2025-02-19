@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.fit2081.viettran_33810672_fit2081_a1.R;
-import com.fit2081.viettran_33810672_fit2081_a2.appViewModel;
+import com.fit2081.viettran_33810672_fit2081_a2.viewmodel.appViewModel;
 import com.fit2081.viettran_33810672_fit2081_a2.model.database.CategoryDatabaseHelper;
 import com.fit2081.viettran_33810672_fit2081_a2.model.database.appDatabaseHelper;
 import com.fit2081.viettran_33810672_fit2081_a2.model.entity.CategoryEntity;
