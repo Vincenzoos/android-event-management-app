@@ -1,4 +1,4 @@
-package com.fit2081.viettran_33810672_fit2081_a2;
+package com.fit2081.viettran_33810672_fit2081_a2.view.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.fit2081.viettran_33810672_fit2081_a1.R;
 import com.fit2081.viettran_33810672_fit2081_a2.model.entity.CategoryEntity;
+import com.fit2081.viettran_33810672_fit2081_a2.view.activity.MapsActivity;
 
 import java.util.ArrayList;
 

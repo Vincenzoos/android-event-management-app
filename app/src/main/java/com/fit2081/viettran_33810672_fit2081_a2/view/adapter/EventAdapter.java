@@ -1,4 +1,4 @@
-package com.fit2081.viettran_33810672_fit2081_a2;
+package com.fit2081.viettran_33810672_fit2081_a2.view.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import com.fit2081.viettran_33810672_fit2081_a1.R;
 import com.fit2081.viettran_33810672_fit2081_a2.model.entity.EventEntity;
+import com.fit2081.viettran_33810672_fit2081_a2.view.activity.EventLookUpActivity;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;

@@ -4,7 +4,7 @@
     android:id="@+id/FragmentListCategory"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.fit2081.viettran_33810672_fit2081_a2.FragmentListCategory">
+    tools:context="com.fit2081.viettran_33810672_fit2081_a2.view.fragment.FragmentListCategory">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_category_header"

@@ -21,7 +21,7 @@
         android:theme="@style/Theme.VietTran33810672FIT2081A2"
         tools:targetApi="31">
         <activity
-            android:name="com.fit2081.viettran_33810672_fit2081_a2.EventLookUpActivity"
+            android:name="com.fit2081.viettran_33810672_fit2081_a2.view.activity.EventLookUpActivity"
             android:exported="false" />
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
@@ -39,14 +39,14 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name="com.fit2081.viettran_33810672_fit2081_a2.MapsActivity"
+            android:name="com.fit2081.viettran_33810672_fit2081_a2.view.activity.MapsActivity"
             android:exported="false"
             android:label="@string/title_activity_maps" />
         <activity
-            android:name="com.fit2081.viettran_33810672_fit2081_a2.ListEventActivity"
+            android:name="com.fit2081.viettran_33810672_fit2081_a2.view.activity.ListEventActivity"
             android:exported="false" />
         <activity
-            android:name="com.fit2081.viettran_33810672_fit2081_a2.ListCategoryActivity"
+            android:name="com.fit2081.viettran_33810672_fit2081_a2.view.activity.ListCategoryActivity"
             android:exported="false" />
 
         <receiver
@@ -59,17 +59,17 @@
         </receiver>
 
         <activity
-            android:name="com.fit2081.viettran_33810672_fit2081_a2.NewCategoryActivity"
+            android:name="com.fit2081.viettran_33810672_fit2081_a2.view.activity.NewCategoryActivity"
             android:exported="false" />
         <activity
-            android:name="com.fit2081.viettran_33810672_fit2081_a2.DashBoardActivity"
+            android:name="com.fit2081.viettran_33810672_fit2081_a2.view.activity.DashBoardActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustPan"/>
         <activity
-            android:name="com.fit2081.viettran_33810672_fit2081_a2.LoginActivity"
+            android:name="com.fit2081.viettran_33810672_fit2081_a2.view.activity.LoginActivity"
             android:exported="false" />
         <activity
-            android:name="com.fit2081.viettran_33810672_fit2081_a2.RegisterActivity"
+            android:name="com.fit2081.viettran_33810672_fit2081_a2.view.activity.RegisterActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -6,8 +6,8 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelStoreOwner;
 
-import com.fit2081.viettran_33810672_fit2081_a2.CategoryAdapter;
-import com.fit2081.viettran_33810672_fit2081_a2.EventAdapter;
+import com.fit2081.viettran_33810672_fit2081_a2.view.adapter.CategoryAdapter;
+import com.fit2081.viettran_33810672_fit2081_a2.view.adapter.EventAdapter;
 import com.fit2081.viettran_33810672_fit2081_a2.model.entity.CategoryEntity;
 import com.fit2081.viettran_33810672_fit2081_a2.model.entity.EventEntity;
 import com.fit2081.viettran_33810672_fit2081_a2.appViewModel;

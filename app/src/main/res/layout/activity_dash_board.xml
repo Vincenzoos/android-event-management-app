@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/dashboard_bg"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.fit2081.viettran_33810672_fit2081_a2.DashBoardActivity">
+    tools:context="com.fit2081.viettran_33810672_fit2081_a2.view.activity.DashBoardActivity">
 
     <TextView
         android:id="@+id/textView"

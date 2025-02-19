@@ -1,4 +1,4 @@
-package com.fit2081.viettran_33810672_fit2081_a2;
+package com.fit2081.viettran_33810672_fit2081_a2.view.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,29 +8,28 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.fit2081.viettran_33810672_fit2081_a1.R;
-import com.fit2081.viettran_33810672_fit2081_a2.model.database.CategoryDatabaseHelper;
+import com.fit2081.viettran_33810672_fit2081_a2.view.fragment.FragmentListEvent;
 import com.google.gson.Gson;
 
-public class ListCategoryActivity extends AppCompatActivity {
-    Gson gson;
-    Toolbar AllCateToolbar;
 
-    private CategoryDatabaseHelper categoryDatabaseHelper;
+public class ListEventActivity extends AppCompatActivity {
+    Gson gson;
+    Toolbar AllEventToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_category);
+        setContentView(R.layout.activity_list_event);
 
         // Set up the toolbar and back button
-        AllCateToolbar = findViewById(R.id.cate_toolbar);
-        setSupportActionBar(AllCateToolbar);
+        AllEventToolbar = findViewById(R.id.event_toolbar);
+        setSupportActionBar(AllEventToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
         // Add the fragment to the host container
         getSupportFragmentManager().beginTransaction().replace(
-                R.id.listCate_host_container, new FragmentListCategory()).commit();
+                R.id.listEvent_host_container, new FragmentListEvent()).commit();
     }
 
     @Override
