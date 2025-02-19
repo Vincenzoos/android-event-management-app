@@ -22,7 +22,7 @@ public class RegisterActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_register);
 
         // Set global variables to the relevant UI elements in the Register page
         etUsername = findViewById(R.id.etUsername);
