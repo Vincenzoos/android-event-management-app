@@ -1,4 +1,4 @@
-package com.fit2081.viettran_33810672_fit2081_a2;
+package com.fit2081.viettran_33810672_fit2081_a2.utils;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
