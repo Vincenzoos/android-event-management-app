@@ -1,5 +1,4 @@
 TODO:
-- files organization
 - Add images showcasing the app functionality
 
 Android Event Management Application
@@ -8,9 +7,9 @@ Description:
 An Android app that allows event organizers to systematically keep track of events and related information, such as the number of tickets, locations, and status.
 
 Technology stack:
-database: room database then migrated to Firebase
-model architecture: Model-View-Controller
-language: Java
+- database: room database then migrated to Firebase
+- model architecture: Model-View-ViewModel
+- language: Java
 
 Features:
 - create a new account for an event organizer
