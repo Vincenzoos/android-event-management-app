@@ -1,10 +1,12 @@
-package com.fit2081.viettran_33810672_fit2081_a2.provider;
+package com.fit2081.viettran_33810672_fit2081_a2.model.database;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
-import androidx.room.Update;
+
+import com.fit2081.viettran_33810672_fit2081_a2.model.entity.CategoryEntity;
+import com.fit2081.viettran_33810672_fit2081_a2.model.entity.EventEntity;
 
 import java.util.List;
 

@@ -2,7 +2,6 @@ package com.fit2081.viettran_33810672_fit2081_a2;
 
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,10 +11,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.fit2081.viettran_33810672_fit2081_a1.R;
-import com.fit2081.viettran_33810672_fit2081_a2.provider.CategoryEntity;
+import com.fit2081.viettran_33810672_fit2081_a2.model.entity.CategoryEntity;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class MyCategoryAdapter extends RecyclerView.Adapter<MyCategoryAdapter.ViewHolder> {
     private ArrayList<CategoryEntity> cateDatabase;

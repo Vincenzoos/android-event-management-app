@@ -1,9 +1,9 @@
-package com.fit2081.viettran_33810672_fit2081_a2;
+package com.fit2081.viettran_33810672_fit2081_a2.model.database;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.fit2081.viettran_33810672_fit2081_a2.provider.CategoryEntity;
+import com.fit2081.viettran_33810672_fit2081_a2.model.entity.CategoryEntity;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 

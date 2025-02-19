@@ -1,10 +1,14 @@
-package com.fit2081.viettran_33810672_fit2081_a2.provider;
+package com.fit2081.viettran_33810672_fit2081_a2.model.database;
 
 import android.content.Context;
 
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
+
+import com.fit2081.viettran_33810672_fit2081_a2.model.entity.CategoryEntity;
+import com.fit2081.viettran_33810672_fit2081_a2.model.entity.EventEntity;
+
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -22,7 +26,7 @@ public abstract class appDatabase extends RoomDatabase {
     // ExecutorService is a JDK API that simplifies running tasks in asynchronous mode.
     // Generally speaking, ExecutorService automatically provides a pool of threads and an API
     // for assigning tasks to it.
-    static final ExecutorService databaseWriteExecutor =
+    public static final ExecutorService databaseWriteExecutor =
             Executors.newFixedThreadPool(NUMBER_OF_THREADS);
 
 
@@ -36,7 +40,7 @@ public abstract class appDatabase extends RoomDatabase {
      * @return a reference to the database for read and write operation
      */
 
-    static appDatabase getDatabase(final Context context){
+    public static appDatabase getDatabase(final Context context){
         if(INSTANCE == null){
             // Synchronized blocks or methods prevents thread interference and make sure that data is consistent.
             // It means that only one thread can access critical section by acquiring a lock.

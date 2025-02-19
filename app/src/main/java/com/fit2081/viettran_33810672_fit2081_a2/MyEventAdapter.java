@@ -7,11 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import com.fit2081.viettran_33810672_fit2081_a1.R;
-import com.fit2081.viettran_33810672_fit2081_a2.provider.CategoryEntity;
-import com.fit2081.viettran_33810672_fit2081_a2.provider.EventEntity;
+import com.fit2081.viettran_33810672_fit2081_a2.model.entity.EventEntity;
 
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;

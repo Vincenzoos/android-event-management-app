@@ -1,4 +1,4 @@
-package com.fit2081.viettran_33810672_fit2081_a2.provider;
+package com.fit2081.viettran_33810672_fit2081_a2.model.entity;
 
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;

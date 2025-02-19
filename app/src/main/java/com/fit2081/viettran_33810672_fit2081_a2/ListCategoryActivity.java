@@ -6,15 +6,10 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.Switch;
-import android.widget.TextView;
 
 import com.fit2081.viettran_33810672_fit2081_a1.R;
+import com.fit2081.viettran_33810672_fit2081_a2.model.database.CategoryDatabaseHelper;
 import com.google.gson.Gson;
-
-import java.util.ArrayList;
 
 public class ListCategoryActivity extends AppCompatActivity {
     Gson gson;

@@ -1,18 +1,16 @@
-package com.fit2081.viettran_33810672_fit2081_a2;
-
-import android.util.Log;
+package com.fit2081.viettran_33810672_fit2081_a2.model.database;
 
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelStoreOwner;
 
-import com.fit2081.viettran_33810672_fit2081_a2.provider.CategoryEntity;
-import com.fit2081.viettran_33810672_fit2081_a2.provider.EventEntity;
-import com.fit2081.viettran_33810672_fit2081_a2.provider.appViewModel;
-import com.google.gson.Gson;
+import com.fit2081.viettran_33810672_fit2081_a2.MyCategoryAdapter;
+import com.fit2081.viettran_33810672_fit2081_a2.MyEventAdapter;
+import com.fit2081.viettran_33810672_fit2081_a2.model.entity.CategoryEntity;
+import com.fit2081.viettran_33810672_fit2081_a2.model.entity.EventEntity;
+import com.fit2081.viettran_33810672_fit2081_a2.appViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -74,7 +72,7 @@ public class appDatabaseHelper {
         return eventDatabase;
     }
 
-    public void subscribeCateToLiveData(LifecycleOwner lifecycleOwner ,appViewModel mAppViewModel ,MyCategoryAdapter myCategoryAdapter){
+    public void subscribeCateToLiveData(LifecycleOwner lifecycleOwner , appViewModel mAppViewModel , MyCategoryAdapter myCategoryAdapter){
         // subscribe to LiveData of type ArrayList<>,
         // any changes detected in the database will be notified to this fragment
         mAppViewModel.getAllCate().observe(lifecycleOwner, newData -> {
@@ -84,7 +82,7 @@ public class appDatabaseHelper {
         });
     }
 
-    public void subscribeEventToLiveData(LifecycleOwner lifecycleOwner ,appViewModel mAppViewModel ,MyEventAdapter myEventAdapter){
+    public void subscribeEventToLiveData(LifecycleOwner lifecycleOwner , appViewModel mAppViewModel , MyEventAdapter myEventAdapter){
         // subscribe to LiveData of type ArrayList<>,
         // any changes detected in the database will be notified to this fragment
         // subscribe to LiveData of type ArrayList<>,

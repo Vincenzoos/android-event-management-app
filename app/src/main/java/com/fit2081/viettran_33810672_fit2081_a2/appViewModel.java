@@ -1,10 +1,14 @@
-package com.fit2081.viettran_33810672_fit2081_a2.provider;
+package com.fit2081.viettran_33810672_fit2081_a2;
 
 import android.app.Application;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
+
+import com.fit2081.viettran_33810672_fit2081_a2.model.entity.CategoryEntity;
+import com.fit2081.viettran_33810672_fit2081_a2.model.entity.EventEntity;
+import com.fit2081.viettran_33810672_fit2081_a2.model.repository.appRepository;
 
 import java.util.List;
 

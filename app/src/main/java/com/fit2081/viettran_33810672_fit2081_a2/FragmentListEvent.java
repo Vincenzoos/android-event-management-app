@@ -3,7 +3,6 @@ package com.fit2081.viettran_33810672_fit2081_a2;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -13,9 +12,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.fit2081.viettran_33810672_fit2081_a1.R;
-import com.fit2081.viettran_33810672_fit2081_a2.provider.CategoryEntity;
-import com.fit2081.viettran_33810672_fit2081_a2.provider.EventEntity;
-import com.fit2081.viettran_33810672_fit2081_a2.provider.appViewModel;
+import com.fit2081.viettran_33810672_fit2081_a2.model.database.EventDatabaseHelper;
+import com.fit2081.viettran_33810672_fit2081_a2.model.database.appDatabaseHelper;
+import com.fit2081.viettran_33810672_fit2081_a2.model.entity.EventEntity;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;

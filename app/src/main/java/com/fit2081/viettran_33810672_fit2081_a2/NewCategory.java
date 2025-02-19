@@ -4,14 +4,12 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
-import androidx.lifecycle.ViewModelProvider;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
@@ -19,8 +17,9 @@ import android.widget.Switch;
 import android.widget.Toast;
 
 import com.fit2081.viettran_33810672_fit2081_a1.R;
-import com.fit2081.viettran_33810672_fit2081_a2.provider.CategoryEntity;
-import com.fit2081.viettran_33810672_fit2081_a2.provider.appViewModel;
+import com.fit2081.viettran_33810672_fit2081_a2.model.database.CategoryDatabaseHelper;
+import com.fit2081.viettran_33810672_fit2081_a2.model.database.appDatabaseHelper;
+import com.fit2081.viettran_33810672_fit2081_a2.model.entity.CategoryEntity;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
