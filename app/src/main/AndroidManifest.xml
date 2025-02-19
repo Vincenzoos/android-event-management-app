@@ -59,17 +59,17 @@
         </receiver>
 
         <activity
-            android:name="com.fit2081.viettran_33810672_fit2081_a2.NewCategory"
+            android:name="com.fit2081.viettran_33810672_fit2081_a2.NewCategoryActivity"
             android:exported="false" />
         <activity
-            android:name="com.fit2081.viettran_33810672_fit2081_a2.DashBoard"
+            android:name="com.fit2081.viettran_33810672_fit2081_a2.DashBoardActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustPan"/>
         <activity
-            android:name="com.fit2081.viettran_33810672_fit2081_a2.LoginPage"
+            android:name="com.fit2081.viettran_33810672_fit2081_a2.LoginActivity"
             android:exported="false" />
         <activity
-            android:name="com.fit2081.viettran_33810672_fit2081_a2.MainActivity"
+            android:name="com.fit2081.viettran_33810672_fit2081_a2.RegisterActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

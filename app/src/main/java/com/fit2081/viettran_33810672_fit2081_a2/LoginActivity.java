@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import com.fit2081.viettran_33810672_fit2081_a1.R;
 
-public class LoginPage extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     // Declare global variables for Username and Password in the Login page
     EditText etLogUsername, etLogPassword;
@@ -41,7 +41,7 @@ public class LoginPage extends AppCompatActivity {
             Toast.makeText(this,"Incorrect username or password!", Toast.LENGTH_SHORT).show();
         }
         else {
-            Intent DashBoard = new Intent(this, DashBoard.class);
+            Intent DashBoard = new Intent(this, DashBoardActivity.class);
             Toast.makeText(this, "Successful Login!", Toast.LENGTH_SHORT).show();
             startActivity(DashBoard);
         }

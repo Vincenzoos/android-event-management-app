@@ -85,8 +85,8 @@ public class FragmentListCategory extends Fragment {
 //        Log.e("cateDb", gson.toJson(cateDatabase));
         RecyclerView recyclerView = cateFragment.findViewById(R.id.rvCategory);
 
-        MyCategoryAdapter myCategoryAdapter = new MyCategoryAdapter();
-        recyclerView.setAdapter(myCategoryAdapter);
+        CategoryAdapter categoryAdapter = new CategoryAdapter();
+        recyclerView.setAdapter(categoryAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         databaseHelper = new appDatabaseHelper();
@@ -100,7 +100,7 @@ public class FragmentListCategory extends Fragment {
 //            myCategoryAdapter.notifyDataSetChanged();
 //        });
 
-        databaseHelper.subscribeCateToLiveData(getViewLifecycleOwner(), mAppViewModel, myCategoryAdapter);
+        databaseHelper.subscribeCateToLiveData(getViewLifecycleOwner(), mAppViewModel, categoryAdapter);
 
         return cateFragment;
     }

@@ -14,25 +14,25 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class MyEventAdapter extends RecyclerView.Adapter<MyEventAdapter.ViewHolder> {
+public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> {
 
     private ArrayList<EventEntity> eventDatabase;
 
 //    public MyEventAdapter(ArrayList<EventEntity> eventDatabase) {
 //        this.eventDatabase = eventDatabase;
 //    }
-    public MyEventAdapter() {}
+    public EventAdapter() {}
     
     @NonNull
     @Override
-    public MyEventAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public EventAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_event, parent, false);
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyEventAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull EventAdapter.ViewHolder holder, int position) {
         EventEntity event = eventDatabase.get(position);
         String EventID = "ID: " + event.getEventID();
         holder.tvCardEventID.setText(EventID);

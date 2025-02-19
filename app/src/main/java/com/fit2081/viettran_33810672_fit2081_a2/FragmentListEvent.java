@@ -85,14 +85,14 @@ public class FragmentListEvent extends Fragment {
         RecyclerView recyclerView = eventFragment.findViewById(R.id.rvEvent);
 
 //        MyEventAdapter myEventAdapter = new MyEventAdapter(eventDatabase);
-        MyEventAdapter myEventAdapter = new MyEventAdapter();
-        recyclerView.setAdapter(myEventAdapter);
+        EventAdapter eventAdapter = new EventAdapter();
+        recyclerView.setAdapter(eventAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         databaseHelper = new appDatabaseHelper();
         // initialise ViewModel
         appViewModel mAppViewModel = databaseHelper.initViewModel(this);
-        databaseHelper.subscribeEventToLiveData(getViewLifecycleOwner(), mAppViewModel, myEventAdapter);
+        databaseHelper.subscribeEventToLiveData(getViewLifecycleOwner(), mAppViewModel, eventAdapter);
 
         return eventFragment;
     }

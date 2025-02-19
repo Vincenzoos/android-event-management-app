@@ -6,8 +6,8 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelStoreOwner;
 
-import com.fit2081.viettran_33810672_fit2081_a2.MyCategoryAdapter;
-import com.fit2081.viettran_33810672_fit2081_a2.MyEventAdapter;
+import com.fit2081.viettran_33810672_fit2081_a2.CategoryAdapter;
+import com.fit2081.viettran_33810672_fit2081_a2.EventAdapter;
 import com.fit2081.viettran_33810672_fit2081_a2.model.entity.CategoryEntity;
 import com.fit2081.viettran_33810672_fit2081_a2.model.entity.EventEntity;
 import com.fit2081.viettran_33810672_fit2081_a2.appViewModel;
@@ -72,25 +72,25 @@ public class appDatabaseHelper {
         return eventDatabase;
     }
 
-    public void subscribeCateToLiveData(LifecycleOwner lifecycleOwner , appViewModel mAppViewModel , MyCategoryAdapter myCategoryAdapter){
+    public void subscribeCateToLiveData(LifecycleOwner lifecycleOwner , appViewModel mAppViewModel , CategoryAdapter categoryAdapter){
         // subscribe to LiveData of type ArrayList<>,
         // any changes detected in the database will be notified to this fragment
         mAppViewModel.getAllCate().observe(lifecycleOwner, newData -> {
             // cast List<Item> to ArrayList<>
-            myCategoryAdapter.setCategory((ArrayList<CategoryEntity>) newData);
-            myCategoryAdapter.notifyDataSetChanged();
+            categoryAdapter.setCategory((ArrayList<CategoryEntity>) newData);
+            categoryAdapter.notifyDataSetChanged();
         });
     }
 
-    public void subscribeEventToLiveData(LifecycleOwner lifecycleOwner , appViewModel mAppViewModel , MyEventAdapter myEventAdapter){
+    public void subscribeEventToLiveData(LifecycleOwner lifecycleOwner , appViewModel mAppViewModel , EventAdapter eventAdapter){
         // subscribe to LiveData of type ArrayList<>,
         // any changes detected in the database will be notified to this fragment
         // subscribe to LiveData of type ArrayList<>,
         // any changes detected in the database will be notified to this fragment
         mAppViewModel.getAllEvent().observe(lifecycleOwner, newData -> {
             // cast List<Item> to ArrayList<>
-            myEventAdapter.setEvent((ArrayList<EventEntity>) newData);
-            myEventAdapter.notifyDataSetChanged();
+            eventAdapter.setEvent((ArrayList<EventEntity>) newData);
+            eventAdapter.notifyDataSetChanged();
         });
     }
 

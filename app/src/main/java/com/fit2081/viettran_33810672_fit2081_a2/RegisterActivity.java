@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import com.fit2081.viettran_33810672_fit2081_a1.R;
 
-public class MainActivity extends AppCompatActivity {
+public class RegisterActivity extends AppCompatActivity {
 
     // Declare global variables for Username and Password in the Register page
     EditText etUsername, etPassword, etConfPassword;
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Invalid username or password!", Toast.LENGTH_SHORT).show();
         }
         else {
-            Intent login = new Intent(this, LoginPage.class);
+            Intent login = new Intent(this, LoginActivity.class);
             login.putExtra("username", Username);
             login.putExtra("password", Password);
 
@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences sP = getPreferences(MODE_PRIVATE);
         String Username = sP.getString(USERNAME_KEY,"");
         String Password = sP.getString(PASSWORD_KEY,"");
-        Intent login = new Intent(this, LoginPage.class);
+        Intent login = new Intent(this, LoginActivity.class);
         login.putExtra("username", Username);
         login.putExtra("password", Password);
         Toast.makeText(this, "Go to Login page", Toast.LENGTH_SHORT).show();

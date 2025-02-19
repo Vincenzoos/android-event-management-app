@@ -15,21 +15,21 @@ import com.fit2081.viettran_33810672_fit2081_a2.model.entity.CategoryEntity;
 
 import java.util.ArrayList;
 
-public class MyCategoryAdapter extends RecyclerView.Adapter<MyCategoryAdapter.ViewHolder> {
+public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHolder> {
     private ArrayList<CategoryEntity> cateDatabase;
 
-    public MyCategoryAdapter() {}
+    public CategoryAdapter() {}
 
     @NonNull
     @Override
-    public MyCategoryAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public CategoryAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_category, parent, false);
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyCategoryAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull CategoryAdapter.ViewHolder holder, int position) {
         CategoryEntity category = cateDatabase.get(position);
         holder.tvCardCateID.setText(category.getCateID());
         holder.tvCardCateName.setText(category.getCateName());

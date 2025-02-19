@@ -37,7 +37,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.StringTokenizer;
 
-public class DashBoard extends AppCompatActivity {
+public class DashBoardActivity extends AppCompatActivity {
 
     // Declare global variables
     NavigationView navigationView;
@@ -139,8 +139,8 @@ public class DashBoard extends AppCompatActivity {
         // initialise ViewModel
         mAppViewModel = databaseHelper.initViewModel(this);
 
-        cateDatabase = databaseHelper.Categories(DashBoard.this, mAppViewModel);
-        eventDatabase = databaseHelper.Events(DashBoard.this, mAppViewModel);
+        cateDatabase = databaseHelper.Categories(DashBoardActivity.this, mAppViewModel);
+        eventDatabase = databaseHelper.Events(DashBoardActivity.this, mAppViewModel);
         Log.e("cateDbStr",gson.toJson(cateDatabase));
         Log.e("eventDbStr",gson.toJson(eventDatabase));
 
@@ -228,11 +228,11 @@ public class DashBoard extends AppCompatActivity {
             Toast.makeText(this, "Missing required fields (Event Name and/or Category ID)", Toast.LENGTH_LONG).show();
         } else if (!listCategoryID.contains(EventCatID)){
             Toast.makeText(this, "Category/Category ID does not exist", Toast.LENGTH_LONG).show();
-        } else if (!MyHelper.isAlphaNumericContainsWhiteSpace(EventName) || !MyHelper.containsOnlySpace(EventName)) {
+        } else if (!AppUtils.isAlphaNumericContainsWhiteSpace(EventName) || !AppUtils.containsOnlySpace(EventName)) {
             Toast.makeText(this, "Event Name must contain alphabetical characters with or without empty spaces", Toast.LENGTH_SHORT).show();
-        } else if (MyHelper.isAlphaNumericContainsWhiteSpace(EventName) && !MyHelper.containsAtLeastOneAlpha(EventName)) {
+        } else if (AppUtils.isAlphaNumericContainsWhiteSpace(EventName) && !AppUtils.containsAtLeastOneAlpha(EventName)) {
             Toast.makeText(this, "Event Name must contain alphabetical characters with or without empty spaces", Toast.LENGTH_SHORT).show();
-        }else if (!TicketsAvl.isEmpty() && !MyHelper.isPositiveInt(TicketsAvl)) {
+        }else if (!TicketsAvl.isEmpty() && !AppUtils.isPositiveInt(TicketsAvl)) {
             Toast.makeText(this, "Tickets field can only contain 0 or positive numbers", Toast.LENGTH_LONG).show();
         }else {
             // random generated category ID elements
@@ -292,7 +292,7 @@ public class DashBoard extends AppCompatActivity {
                      * The protocol is to have the  EventName, categoryID, Tickets Available and isActive status separate by a semicolon
                      * */
                     String Message = sT1.nextToken();
-                    if (MyHelper.countOccurrences(Message, ';') != 3) { // Expect exactly 3 semicolon ';'
+                    if (AppUtils.countOccurrences(Message, ';') != 3) { // Expect exactly 3 semicolon ';'
                         throw new IllegalArgumentException("INVALID MESSAGE, correct format is: event:Name;CategoryId;Tickets;IsActive");
                     }
                     else{
@@ -303,9 +303,9 @@ public class DashBoard extends AppCompatActivity {
                         String eventIsActive = sT2.nextToken().trim();
 
                         // Verify message inputs
-                        if (!MyHelper.isPositiveInt(ticketsAvl)){
+                        if (!AppUtils.isPositiveInt(ticketsAvl)){
                             throw new IllegalArgumentException("INVALID MESSAGE, Tickets Available must be positive integer or 0");
-                        } else if (!MyHelper.isBoolean(eventIsActive)) {
+                        } else if (!AppUtils.isBoolean(eventIsActive)) {
                             throw new IllegalArgumentException("INVALID MESSAGE, Is Active status must be either 'TRUE' or 'FALSE'");
                         }
                         else {
@@ -317,9 +317,9 @@ public class DashBoard extends AppCompatActivity {
                     }
                 }
             } catch (IllegalArgumentException e) {
-                Toast.makeText(DashBoard.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                Toast.makeText(DashBoardActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
             } catch (Exception e){
-                Toast.makeText(DashBoard.this, "INVALID MESSAGE, correct format: event:Name;CategoryId;Tickets;IsActive", Toast.LENGTH_LONG).show();
+                Toast.makeText(DashBoardActivity.this, "INVALID MESSAGE, correct format: event:Name;CategoryId;Tickets;IsActive", Toast.LENGTH_LONG).show();
             }
         }
     }
@@ -362,7 +362,7 @@ public class DashBoard extends AppCompatActivity {
             // Remove the last event from the database and
             EventEntity lastEvent = mAppViewModel.getLastEvent();
             mAppViewModel.deleteEventByID(lastEvent.getEventID());
-            eventDatabase = databaseHelper.Events(DashBoard.this, mAppViewModel);
+            eventDatabase = databaseHelper.Events(DashBoardActivity.this, mAppViewModel);
             Log.e("eventDbStr", String.valueOf(eventDatabase.size()));
 
             // Update the associated category event count
@@ -393,7 +393,7 @@ public class DashBoard extends AppCompatActivity {
         swEventIsActive.setChecked(false);
     }
     public void onNewCategoryClick(){
-        Intent NewCate = new Intent(this, NewCategory.class);
+        Intent NewCate = new Intent(this, NewCategoryActivity.class);
         startActivity(NewCate);
     }
 

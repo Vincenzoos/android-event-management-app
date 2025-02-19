@@ -26,7 +26,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.StringTokenizer;
 
-public class NewCategory extends AppCompatActivity {
+public class NewCategoryActivity extends AppCompatActivity {
 
     // Declare global variables for Category ID, Name, Count and IsActive
     EditText etCatID, etCatName, etEventCount, etCatLocation;
@@ -39,7 +39,7 @@ public class NewCategory extends AppCompatActivity {
     private appDatabaseHelper databaseHelper;
 
     private CategoryDatabaseHelper categoryDatabaseHelper;
-    MyCategoryAdapter categoryAdapter;
+    CategoryAdapter categoryAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -113,11 +113,11 @@ public class NewCategory extends AppCompatActivity {
         boolean CatIsActive = swCatIsActive.isChecked();
 
         // required fields cannot be empty
-        if (!MyHelper.isAlphaNumericContainsWhiteSpace(CatName) || !MyHelper.containsOnlySpace(CatName)) {
+        if (!AppUtils.isAlphaNumericContainsWhiteSpace(CatName) || !AppUtils.containsOnlySpace(CatName)) {
             Toast.makeText(this, "Category Name must contain alphabetical characters with or without empty spaces", Toast.LENGTH_SHORT).show();
-        } else if (MyHelper.isAlphaNumericContainsWhiteSpace(CatName) && !MyHelper.containsAtLeastOneAlpha(CatName)) {
+        } else if (AppUtils.isAlphaNumericContainsWhiteSpace(CatName) && !AppUtils.containsAtLeastOneAlpha(CatName)) {
             Toast.makeText(this, "Category Name must contain alphabetical characters with or without empty spaces", Toast.LENGTH_SHORT).show();
-        } else if (!EventCount.isEmpty() && !MyHelper.isPositiveInt(EventCount)) {
+        } else if (!EventCount.isEmpty() && !AppUtils.isPositiveInt(EventCount)) {
             Toast.makeText(this, "Event count field can only contain 0 or positive numbers", Toast.LENGTH_SHORT).show();
         } else if (CatLocation.isEmpty()) {
             Toast.makeText(this, "Please enter a location!", Toast.LENGTH_SHORT).show();
@@ -189,7 +189,7 @@ public class NewCategory extends AppCompatActivity {
                      * */
                     String Message = sT1.nextToken();
 
-                    if (MyHelper.countOccurrences(Message, ';') != 2) { // Expect exactly 2 semicolon ';'
+                    if (AppUtils.countOccurrences(Message, ';') != 2) { // Expect exactly 2 semicolon ';'
                         throw new IllegalArgumentException("INVALID MESSAGE, correct format is: category:Name;EventCount;IsActive");
                     }
                     else {
@@ -199,9 +199,9 @@ public class NewCategory extends AppCompatActivity {
                         String CatIsActive = sT2.nextToken().trim();
 
                         // Verify message input for Event Count and isActive status
-                        if (!MyHelper.isPositiveInt(eventCount)){
+                        if (!AppUtils.isPositiveInt(eventCount)){
                             throw new IllegalArgumentException("INVALID MESSAGE, Event Count must be a positive integer only");
-                        } else if (!MyHelper.isBoolean(CatIsActive)) {
+                        } else if (!AppUtils.isBoolean(CatIsActive)) {
                             throw new IllegalArgumentException("INVALID MESSAGE, isActive must be either 'TRUE' or 'FALSE");
                         }
                         else{
@@ -213,9 +213,9 @@ public class NewCategory extends AppCompatActivity {
 
                 }
             } catch (IllegalArgumentException e) {
-                Toast.makeText(NewCategory.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                Toast.makeText(NewCategoryActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
             } catch (Exception e){
-                Toast.makeText(NewCategory.this, "INVALID MESSAGE, correct format is: category:Name;EventCount;IsActive", Toast.LENGTH_LONG).show();
+                Toast.makeText(NewCategoryActivity.this, "INVALID MESSAGE, correct format is: category:Name;EventCount;IsActive", Toast.LENGTH_LONG).show();
             }
 
         }

@@ -1,8 +1,8 @@
 package com.fit2081.viettran_33810672_fit2081_a2;
 
-public class MyHelper {
+public class AppUtils {
     // Private constructor to prevent instantiation
-    private MyHelper() {
+    private AppUtils() {
         // This constructor is intentionally empty
     }
     // SMS validation check functions

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/login_bg1"
     android:onClick="onLoginClick"
-    tools:context="com.fit2081.viettran_33810672_fit2081_a2.MainActivity">
+    tools:context="com.fit2081.viettran_33810672_fit2081_a2.RegisterActivity">
 
     <TextView
         android:id="@+id/textView"
