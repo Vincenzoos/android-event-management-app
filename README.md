@@ -15,23 +15,28 @@ This Android application empowers event organizers to efficiently manage their e
     *   Existing users can log in securely.
     *   ![Register Page](app_screenshot/register_page.jpg)
     *   ![Login Page](app_screenshot/login_page.jpg)
+    
 *   **Event Management:**
     *   **Create:** Organizers can create new events with detailed information.
     *   **Inspect:** View comprehensive details of existing events.
     *   **Delete:** Remove events that are no longer needed.
     *   ![Dashboard Page](app_screenshot/dashboard_page.jpg)
     *   ![Delete Event Functionality](app_screenshot/delete_functionality.jpg)
+    
 *   **Category Management:**
     *   **Create:** Define new categories to organize events.
     *   **Inspect:** View details of existing categories.
     *   **Delete:** Remove categories that are no longer relevant.
     *   ![Add Category Page](app_screenshot/add_category_page.jpg)
     *   ![Delete Category Functionality](app_screenshot/delete_functionality.jpg)
+    
 *   **Event and Category Listing:**
     *   **List Events:** View a comprehensive list of all events.
     *   ![List Event Page](app_screenshot/list_event_page.jpg)
+    
     *   **List Categories:** View a list of all defined categories.
     *   ![List Category Page](app_screenshot/list_category_page.jpg)
+    
 *   **Event and Category Inspection:**
     *   **Event Details:** Access detailed information about events with google search.
     *   **Category Details:** View details about the location for each category
