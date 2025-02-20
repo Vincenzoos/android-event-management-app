@@ -2,12 +2,14 @@
 
 **Author:** Viet Quoc Tran (Vincent)
 
-## 1.Description
+---
 
+## Description
 This Android application empowers event organizers to efficiently manage their events and related information. It provides a centralized system for tracking crucial details such as ticket counts, event locations, and event status.
 
-## 2.Key Features
+---
 
+## Key Features
 *   **User Authentication:**
     *   Event organizers can create new accounts.
     *   Existing users can log in securely.
@@ -36,13 +38,16 @@ This Android application empowers event organizers to efficiently manage their e
     *   ![Map Page](app_screenshot/map_page.jpg)
     *   ![Event Lookup Page](app_screenshot/event_lookup_page.jpg)
 
-## 3.Technology Stack
+---
 
+## Technology Stack
 *   **Database:** Room Persistence Library
 *   **Architecture:** Model-View-ViewModel (MVVM)
 *   **Language:** Java
 
-## 4. Getting Started
+---
+
+## Getting Started
 
 ### Prerequisites
 
@@ -60,9 +65,13 @@ Before you begin, ensure you have the following installed:
     You can clone the repository using either HTTPS or SSH:
 
     *   **HTTPS:**
-        bash git clone https://github.com/Vincenzoos/android-event-management-app.git
+        ```bash 
+        git clone https://github.com/Vincenzoos/android-event-management-app.git
+        
     *    **SSH:**
-        bash git clone git@github.com:Vincenzoos/android-event-management-app.git
+         ```bash
+         git clone git@github.com:Vincenzoos/android-event-management-app.git
+
 
 2.  **Open in Android Studio:**
 
