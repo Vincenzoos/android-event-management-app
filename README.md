@@ -61,7 +61,7 @@ Before you begin, ensure you have the following installed:
 
     *   **HTTPS:**
         bash git clone https://github.com/Vincenzoos/android-event-management-app.git
-   *    **SSH:**
+    *    **SSH:**
         bash git clone git@github.com:Vincenzoos/android-event-management-app.git
 
 2.  **Open in Android Studio:**
