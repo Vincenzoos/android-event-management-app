@@ -1,30 +1,83 @@
-Android Event Management Application
-Author: Viet Quoc Tran (Vincent)
+# Android Event Management Application
 
-Description:
-An Android app that allows event organizers to systematically keep track of events and related information, such as the number of tickets, locations, and status.
+**Author:** Viet Quoc Tran (Vincent)
 
-Technology stack:
-- database: room database then migrated to Firebase
-- model architecture: Model-View-ViewModel
-- language: Java
+## 1.Description
 
-Features:
-- Create a new account for an event organizer
-![register_page.jpg](app_screenshot/register_page.jpg)
-![login_page.jpg](app_screenshot/login_page.jpg)
-- Create, inspect, delete an event
-![dashboard_page.jpg](app_screenshot/dashboard_page.jpg)
-![delete_functionality.jpg](app_screenshot/delete_functionality.jpg)
-- Create, inspect, delete a category
-![add_category_page.jpg](app_screenshot/add_category_page.jpg)
-![delete_functionality.jpg](app_screenshot/delete_functionality.jpg)
-- List all events
-![list_event_page.jpg](app_screenshot/list_event_page.jpg)
-- List all categories
-![list_category_page.jpg](app_screenshot/list_category_page.jpg)
-- See category and event details such as location, and further information via Google search, Google map and more.
-![map_page.jpg](app_screenshot/map_page.jpg)
-![event_lookup_page.jpg](app_screenshot/event_lookup_page.jpg)
+This Android application empowers event organizers to efficiently manage their events and related information. It provides a centralized system for tracking crucial details such as ticket counts, event locations, and event status.
 
+## 2.Key Features
 
+*   **User Authentication:**
+    *   Event organizers can create new accounts.
+    *   Existing users can log in securely.
+    *   ![Register Page](app_screenshot/register_page.jpg)
+    *   ![Login Page](app_screenshot/login_page.jpg)
+*   **Event Management:**
+    *   **Create:** Organizers can create new events with detailed information.
+    *   **Inspect:** View comprehensive details of existing events.
+    *   **Delete:** Remove events that are no longer needed.
+    *   ![Dashboard Page](app_screenshot/dashboard_page.jpg)
+    *   ![Delete Event Functionality](app_screenshot/delete_functionality.jpg)
+*   **Category Management:**
+    *   **Create:** Define new categories to organize events.
+    *   **Inspect:** View details of existing categories.
+    *   **Delete:** Remove categories that are no longer relevant.
+    *   ![Add Category Page](app_screenshot/add_category_page.jpg)
+    *   ![Delete Category Functionality](app_screenshot/delete_functionality.jpg)
+*   **Event and Category Listing:**
+    *   **List Events:** View a comprehensive list of all events.
+    *   ![List Event Page](app_screenshot/list_event_page.jpg)
+    *   **List Categories:** View a list of all defined categories.
+    *   ![List Category Page](app_screenshot/list_category_page.jpg)
+*   **Event and Category Inspection:**
+    *   **Event Details:** Access detailed information about events with google search.
+    *   **Category Details:** View details about the location for each category
+    *   ![Map Page](app_screenshot/map_page.jpg)
+    *   ![Event Lookup Page](app_screenshot/event_lookup_page.jpg)
+
+## 3.Technology Stack
+
+*   **Database:** Room Persistence Library
+*   **Architecture:** Model-View-ViewModel (MVVM)
+*   **Language:** Java
+
+## 4. Getting Started
+
+### Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+*   [Android Studio](https://developer.android.com/studio)
+*   Android SDK (configured within Android Studio)
+*   Android Emulator (set up within Android Studio)
+*   [Git](https://git-scm.com/)
+
+### Installation
+
+1.  **Clone the Repository:**
+
+    You can clone the repository using either HTTPS or SSH:
+
+    *   **HTTPS:**
+        bash git clone https://github.com/Vincenzoos/android-event-management-app.git
+   *    **SSH:**
+        bash git clone git@github.com:Vincenzoos/android-event-management-app.git
+
+2.  **Open in Android Studio:**
+
+    *   Launch Android Studio.
+    *   Select "Open an Existing Project."
+    *   Navigate to the directory where you cloned the repository and select it.
+
+3.  **Set Up an Android Emulator:**
+
+    *   Open the AVD Manager (Tools > AVD Manager).
+    *   Create a new virtual device.
+    *   Download the necessary system images for your chosen device.
+
+4.  **Build and Run:**
+
+    *   Once the project is open, allow Android Studio to sync the Gradle files.
+    *   Select your emulator from the device dropdown.
+    *   Click the "Run" button (green play icon) to build and run the application on the emulator.
